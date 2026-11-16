@@ -1,0 +1,88 @@
+/* =========================================
+   ESTILOS PERSONALIZADOS PARA EL DASHBOARD
+   ========================================= */
+
+/* Importar una fuente moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* Estilo de las tarjetas de métricas (KPIs) */
+div[data-testid="metric-container"] {
+    background-color: #1E2530;
+    border: 1px solid #2D3748;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease-in-out;
+}
+
+div[data-testid="metric-container"]:hover {
+    transform: translateY(-3px);
+    border-color: #00B4D8;
+}
+
+/* Títulos principales */
+h1 {
+    color: #00B4D8 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.5px;
+}
+
+h2, h3 {
+    color: #E2E8F0 !important;
+    font-weight: 600 !important;
+}
+
+/* Botones */
+.stButton > button {
+    background: linear-gradient(135deg, #00B4D8 0%, #0077B6 100%);
+    color: white !important;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+}
+
+.stButton > button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 180, 216, 0.5);
+}
+
+/* Pestañas (Tabs) */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 10px;
+    background-color: #1E2530;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: #A0AEC0;
+    transition: all 0.2s;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #2D3748;
+    color: #00B4D8 !important;
+    font-weight: 600;
+}
+
+/* Barra lateral */
+[data-testid="stSidebar"] {
+    background-color: #0E1117;
+    border-right: 1px solid #2D3748;
+}
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #2D3748;
+}
